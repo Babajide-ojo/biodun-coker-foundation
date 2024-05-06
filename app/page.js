@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </div>
       <div id="leadership" className="text-white bg-blue-500">
-        <hq className="text-center text-3xl font-medium">Exceptional Loader</hq>
+        <h2 className="text-center text-3xl font-medium">Exceptional Leader</h2>
       </div>
     </main>
   );
