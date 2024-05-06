@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import Image1 from '../public/img1.jpg'
 
 
 const poppins = Poppins({
@@ -44,43 +45,42 @@ export default function Home() {
       className={`${poppins.className} w-screen overflow-hidden bg-[#bbbbc9] `}
     >
       <NavBar setCurrentScroll={setCurrentScroll} />
-      <div id="home" className="h-screen w-full bg-[#bbbbc9] relative mt-24">
-        <div className="max-w-7xl mx-auto p-5 md:p-10 h-full flex flex-col justify-center gap-5 text-white relative z-10">
+      <div id="home" className="h-screen w-full bg-[#bbbbc9] relative mt-60 md:mt-12">
+        <div className="max-w-7xl mx-auto px-5 py-24 md:py-0 md:p-10 h-28 md:h-full flex flex-col justify-center gap-5 text-white relative z-10">
           <p className="text-lg font-medium text-[#282d55]">
             Let&apos;s Stand Together
           </p>
           {/* <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
             Improving communities and imparting change
           </p>  */}
-              <p className="text-lg font-medium max-w-2xl text-[#282d55]">
-           An exceptional leader creating avenues to improve the quality of life in our
+          <p className="text-lg font-medium max-w-2xl text-[#282d55]">
+            An exceptional leader creating avenues to improve the quality of life in our
             community, render change and foster unity
           </p>
-               <h1 className="text-2xl font-bold mt-8">
-              <TypeAnimation
-                sequence={[
-                  // Same substring at the start will only be typed out once, initially
-                  "Improving communities",
-                  2000,
-                  "Impacting change",
-                  2000,
-                  "Impacting lives",
-                  2000,
-                  "Creating solutions",
-                  2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "1.5em", display: "inline-block", color: '#282d55' }}
-                repeat={Infinity}
-              />
-            </h1>
-      
+          <h1 className="text-2xl font-bold mt-8">
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Improving communities",
+                2000,
+                "Impacting change",
+                2000,
+                "Impacting lives",
+                2000,
+                "Creating solutions",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "1.5em", display: "inline-block", color: '#282d55' }}
+              repeat={Infinity}
+            />
+          </h1>
+
         </div>
         <div
-          className={`absolute right-0 bottom-0 transition-opacity duration-500 ${
-            isImageLoaded && currentScroll <= 400 ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute right-0 bottom-0 transition-opacity duration-500 ${isImageLoaded && currentScroll <= 400 ? "opacity-100" : "opacity-0"
+            }`}
         >
           <Image
             src={imgSrc}
@@ -96,11 +96,10 @@ export default function Home() {
       <div id="about" className="w-full text-gray-500 bg-white">
         <div className="max-w-7xl mx-auto p-5 md:px-10 py-32">
           <h2
-            className={`text-center text-[#39ADF8] transition-all transform duration-500 ${
-              currentScroll >= 400
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-40"
-            }`}
+            className={`text-center text-[#39ADF8] transition-all transform duration-500 ${currentScroll >= 400
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-40"
+              }`}
           >
             About{" "}
             <span className="text-[#1F7EC9] text-3xl font-medium">
@@ -109,11 +108,10 @@ export default function Home() {
           </h2>
           <div className={`mt-10 flex flex-col gap-10`}>
             <div
-              className={`transition-all duration-500 sm:flex gap-5 items-start border-blue border-b-2 pb-8  ${
-                currentScroll >= 400
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-40"
-              }`}
+              className={`transition-all duration-500 sm:flex gap-5 items-start border-blue border-b-2 pb-8  ${currentScroll >= 400
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-40"
+                }`}
             >
               <Image
                 src="/igbonla_logo.jpg"
@@ -136,11 +134,10 @@ export default function Home() {
             </div>
 
             <div
-              className={`transition-all duration-500 sm:flex sm:flex-row-reverse gap-5 items-start border-blue border-b-2 pb-8 ${
-                currentScroll >= 400
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-40"
-              }`}
+              className={`transition-all duration-500 sm:flex sm:flex-row-reverse gap-5 items-start border-blue border-b-2 pb-8 ${currentScroll >= 400
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-40"
+                }`}
             >
               <Image
                 src="/oxford_brookes.png"
@@ -160,11 +157,10 @@ export default function Home() {
             </div>
 
             <div
-              className={`transition-all duration-500 sm:flex gap-5 items-start ${
-                currentScroll >= 400
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-40"
-              }`}
+              className={`transition-all duration-500 sm:flex gap-5 items-start ${currentScroll >= 400
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-40"
+                }`}
             >
               <Image
                 src="/fruition.jpeg"
@@ -188,65 +184,85 @@ export default function Home() {
       </div>
       <div
         id="leadership"
-        className={`text-gray-500 bg-[#eef1ff] transition-all duration-500 ${
-          currentScroll >= 1000
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-40"
-        }`}
+        className={`bg-white text-gray-500 bg-[#eef1ff] transition-all duration-500 ${currentScroll >= 1000
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-40"
+          }`}
       >
-        <div className="max-w-7xl mx-auto p-5 md:px-10 py-32">
+        <div className="max-w-7xl mx-auto p-10 md:p-5 md:px-10 py-32">
           <h2 className="text-center text-3xl text-[#282d55] font-medium">
             Exceptional Leader
           </h2>
-          <div className="flex flex-col gap-8 mt-8">
-            <div className="flex flex-col gap-5">
-              <p className="leading-7">
-                Leadership is built on the bedrock of vision, integrity, and
-                empathy. Biodun understands this. That&apos;s the reason these
-                leadership qualities are evident in his endeavors and
-                contributions to society.
-              </p>
-              <p className="leading-7">
-                Living in a time when there&apos;s a constant need to improve
-                people&apos;s lives, Biodun Coker is enthusiastic about giving
-                back and helping out in diverse ways. From providing resources
-                to lending a hand, his set of values is built around uplifting
-                others. He delights in fostering a sense of community and
-                enriching people&apos;s well-being.
-              </p>
-              <p className="leading-7">
-                During the course of building his career, running a business,
-                and supporting communities, Biodun Coker has evolved into an
-                empathetic soul with the innate desire to impact as many lives
-                as possible. His life goal is to provide mentorship, resources,
-                and opportunities to empower people and place them on a path to
-                reach their full potential.
-              </p>
+          <div className="flex flex-col gap-2 mt-8">
+            <div className="block md:flex pt-16">
+              <div className="md:w-1/2 w-full">
+                <div className="flex flex-col gap-5 w-full">
+                  <p className="leading-7">
+                    Leadership is built on the bedrock of vision, integrity, and
+                    empathy. Biodun understands this. That&apos;s the reason these
+                    leadership qualities are evident in his endeavors and
+                    contributions to society.
+                  </p>
+                  <p className="leading-7">
+                    Living in a time when there&apos;s a constant need to improve
+                    people&apos;s lives, Biodun Coker is enthusiastic about giving
+                    back and helping out in diverse ways. From providing resources
+                    to lending a hand, his set of values is built around uplifting
+                    others. He delights in fostering a sense of community and
+                    enriching people&apos;s well-being.
+                  </p>
+                  <p className="leading-7">
+                    During the course of building his career, running a business,
+                    and supporting communities, Biodun Coker has evolved into an
+                    empathetic soul with the innate desire to impact as many lives
+                    as possible. His life goal is to provide mentorship, resources,
+                    and opportunities to empower people and place them on a path to
+                    reach their full potential.
+                  </p>
+                </div>
+              </div>
+              <div className="md:w-1/2 w-full flex justify-end">
+                <Image src={Image1}
+                  className="w-full md:w-3/5 h-full rounded-md"
+                />
+              </div>
+            </div>
+
+            <div className="flex pt-16">
+              <div className="w-1/2 hidden md:flex justify-start">
+                <Image src={Image1}
+                  className="w-3/5 h-full rounded-md"
+                />
+              </div>
+              <div className="md:w-1/2 w-full">
+                <div className="flex flex-col gap-5">
+                  <h3 className="text-[#1F7DCD] text-xl font-medium">
+                    Philanthropy
+                  </h3>
+                  <p className="leading-7">
+                    Having developed an expertise in accounting and attained ACCA
+                    Fellowship, Biodun Coker well understands the importance of
+                    adopting relevant skillsets. This is why as part of his goal to
+                    give back to society, he has established a foundation aimed at
+                    empowering lives within the Lagos Island community with free IT
+                    and Computer skills, vocational studies, and other community
+                    development courses. His goal is to ensure that people are
+                    equipped with the relevant knowledge and tools to thrive and
+                    contribute meaningfully to society.
+                  </p>
+
+                  <h3 className="text-[#1F7DCD] text-xl font-medium pt-4">Family</h3>
+                  <p className="leading-7 pt-4">
+                    As much as Biodun Coker is committedly involved in public
+                    service, he hasn&apos;t faltered when it comes to building a
+                    stable and happy household. He&apos;s currently married and
+                    blessed with two brilliant kids.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="flex flex-col gap-5">
-              <h3 className="text-[#1F7DCD] text-xl font-medium">
-                Philanthropy
-              </h3>
-              <p className="leading-7">
-                Having developed an expertise in accounting and attained ACCA
-                Fellowship, Biodun Coker well understands the importance of
-                adopting relevant skillsets. This is why as part of his goal to
-                give back to society, he has established a foundation aimed at
-                empowering lives within the Lagos Island community with free IT
-                and Computer skills, vocational studies, and other community
-                development courses. His goal is to ensure that people are
-                equipped with the relevant knowledge and tools to thrive and
-                contribute meaningfully to society.
-              </p>
-            </div>
-            <div className="flex flex-col gap-5">
-              <h3 className="text-[#1F7DCD] text-xl font-medium">Family</h3>
-              <p className="leading-7">
-                As much as Biodun Coker is committedly involved in public
-                service, he hasn&apos;t faltered when it comes to building a
-                stable and happy household. He&apos;s currently married and
-                blessed with two brilliant kids.
-              </p>
+
             </div>
           </div>
         </div>

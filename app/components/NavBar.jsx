@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
@@ -36,58 +38,43 @@ const NavBar = ({ setCurrentScroll }) => {
   }, []);
 
   return (
-    <main
-      className={`fixed top-0 left-0 w-screen z-50 p-5 ${
+    <nav
+      className={`fixed top-0 left-0 w-screen z-50 p-3 md:p-5 ${
         !navBg ? "bg-transparent" : "bg-[#101828]"
       }`}
     >
-      <div className="max-w-7xl mx-auto text-white flex justify-between text-lg">
+      <div className="max-w-7xl mx-auto text-white flex justify-between items-center text-lg">
         <Link href={"/"}>
-          <Image src={logo} alt="logo" />
+          <Image src={logo} alt="logo" width={120} height={40} />
         </Link>
 
-        <div className="flex gap-10 items-center">
-          <Link
-            href="#home"
-            className={`hover:text-[#1F7DCD] transition-all duration-300 ${
-              activeLink === "home" && "text-[#1F7DCD]"
-            }`}
-          >
+        <div className="flex gap-8 md:gap-16">
+          <NavLink href="#home" activeLink={activeLink}>
             Home
-          </Link>
-          <Link
-            href="#about"
-            className={`hover:text-[#1F7DCD] transition-all duration-300 ${
-              activeLink === "about" && "text-[#1F7DCD]"
-            }`}
-          >
+          </NavLink>
+          <NavLink href="#about" activeLink={activeLink}>
             About
-          </Link>
-          <Link
-            href="#leadership"
-            className={`hover:text-[#1F7DCD] transition-all duration-300 ${
-              activeLink === "leadership" && "text-[#1F7DCD]"
-            }`}
-          >
+          </NavLink>
+          <NavLink href="#leadership" activeLink={activeLink}>
             Leadership
-          </Link>
-          <Link
-            href="#values"
-            className={`hover:text-[#1F7DCD] transition-all duration-300`}
-          >
-            Values
-          </Link>
-          <Link
-            href="#contact"
-            className={`hover:text-[#1F7DCD] transition-all duration-300`}
-          >
-            Contact
-          </Link>
-          {/* {scroll} */}
+          </NavLink>
+     
         </div>
       </div>
-    </main>
+    </nav>
   );
 };
+
+const NavLink = ({ href, children, activeLink }) => (
+  <Link href={href}>
+    <p
+      className={`hover:text-[#1F7DCD]  text-xs md:text-md transition-all duration-300 ${
+        activeLink === href.slice(1) && "text-[#1F7DCD]"
+      }`}
+    >
+      {children}
+    </p>
+  </Link>
+);
 
 export default NavBar;
