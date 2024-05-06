@@ -20,8 +20,10 @@ const NavBar = ({ setCurrentScroll }) => {
       }
       if (window.scrollY >= 0 && window.scrollY <= 815) {
         setActiveLink("home");
-      } else if (window.scrollY >= 816 && window.scrollY <= 1000) {
+      } else if (window.scrollY >= 816 && window.scrollY <= 1635) {
         setActiveLink("about");
+      } else if (window.scrollY >= 1636 && window.scrollY <= 2300) {
+        setActiveLink("leadership");
       }
     };
 
@@ -63,7 +65,9 @@ const NavBar = ({ setCurrentScroll }) => {
           </Link>
           <Link
             href="#leadership"
-            className={`hover:text-[#1F7DCD] transition-all duration-300`}
+            className={`hover:text-[#1F7DCD] transition-all duration-300 ${
+              activeLink === "leadership" && "text-[#1F7DCD]"
+            }`}
           >
             Leadership
           </Link>

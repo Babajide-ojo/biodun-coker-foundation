@@ -38,11 +38,15 @@ export default function Home() {
   console.log(currentScroll);
 
   return (
-    <main className={`${poppins.className} w-screen overflow-hidden bg-[#bbbbc9] `}>
+    <main
+      className={`${poppins.className} w-screen overflow-hidden bg-[#bbbbc9] `}
+    >
       <NavBar setCurrentScroll={setCurrentScroll} />
       <div id="home" className="h-screen w-full bg-[#bbbbc9] relative mt-24">
         <div className="max-w-7xl mx-auto p-5 md:p-10 h-full flex flex-col justify-center gap-5 text-white relative z-10">
-          <p className="text-lg font-medium text-[#282d55]">Let&apos;s Stand Together</p>
+          <p className="text-lg font-medium text-[#282d55]">
+            Let&apos;s Stand Together
+          </p>
           <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
             Improving communities and imparting change
           </p>
@@ -160,8 +164,70 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="leadership" className="text-white bg-blue-500">
-        <h2 className="text-center text-3xl font-medium">Exceptional Leader</h2>
+      <div
+        id="leadership"
+        className={`text-gray-500 bg-[#eef1ff] transition-all duration-500 ${
+          currentScroll >= 1000
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-40"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto p-5 md:px-10 py-32">
+          <h2 className="text-center text-3xl text-[#282d55] font-medium">
+            Exceptional Leader
+          </h2>
+          <div className="flex flex-col gap-8 mt-8">
+            <div className="flex flex-col gap-5">
+              <p className="leading-7">
+                Leadership is built on the bedrock of vision, integrity, and
+                empathy. Biodun understands this. That&apos;s the reason these
+                leadership qualities are evident in his endeavors and
+                contributions to society.
+              </p>
+              <p className="leading-7">
+                Living in a time when there&apos;s a constant need to improve
+                people&apos;s lives, Biodun Coker is enthusiastic about giving
+                back and helping out in diverse ways. From providing resources
+                to lending a hand, his set of values is built around uplifting
+                others. He delights in fostering a sense of community and
+                enriching people&apos;s well-being.
+              </p>
+              <p className="leading-7">
+                During the course of building his career, running a business,
+                and supporting communities, Biodun Coker has evolved into an
+                empathetic soul with the innate desire to impact as many lives
+                as possible. His life goal is to provide mentorship, resources,
+                and opportunities to empower people and place them on a path to
+                reach their full potential.
+              </p>
+            </div>
+            <div className="flex flex-col gap-5">
+              <h3 className="text-[#1F7DCD] text-xl font-medium">
+                Philanthropy
+              </h3>
+              <p className="leading-7">
+                Having developed an expertise in accounting and attained ACCA
+                Fellowship, Biodun Coker well understands the importance of
+                adopting relevant skillsets. This is why as part of his goal to
+                give back to society, he has established a foundation aimed at
+                empowering lives within the Lagos Island community with free IT
+                and Computer skills, vocational studies, and other community
+                development courses. His goal is to ensure that people are
+                equipped with the relevant knowledge and tools to thrive and
+                contribute meaningfully to society.
+              </p>
+            </div>
+            <div className="flex flex-col gap-5">
+              <h3 className="text-[#1F7DCD] text-xl font-medium">Family</h3>
+              <p className="leading-7">
+                As much as Biodun Coker is committedly involved in public
+                service, he hasn&apos;t faltered when it comes to building a
+                stable and happy household. He&apos;s currently married and
+                blessed with two brilliant kids.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
