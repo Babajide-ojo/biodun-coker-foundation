@@ -113,13 +113,7 @@ export default function Home() {
                 : "opacity-0 -translate-x-40"
                 }`}
             >
-              <Image
-                src="/igbonla_logo.jpg"
-                alt="igbonla"
-                width={100}
-                height={100}
-                className="float-left sm:float-none mr-3"
-              />
+          
               <p className="leading-8">
                 Biodun Coker is a vision-driven bonified Nigerian who’s
                 constantly seizing the opportunity to serve communities and
