@@ -11,25 +11,25 @@ const poppins = Poppins({
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState(0);
-  const [imgSrc, setImgSrc] = useState("/img1.png");
+  const [imgSrc, setImgSrc] = useState("/img3.jpg");
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  useEffect(() => {
-    const allImg = ["/img1.png", "/img2.png", "/img3.png"];
-    let count = 0;
-    const interval = setInterval(() => {
-      if (count < 2) {
-        count += 1;
-      } else count = 0;
+  // useEffect(() => {
+  //   const allImg = ["/img3.jpg", "/img3.jpg", "/img3.jpg"];
+  //   let count = 0;
+  //   const interval = setInterval(() => {
+  //     if (count < 2) {
+  //       count += 1;
+  //     } else count = 0;
 
-      setImgSrc(allImg[count]);
-      setIsImageLoaded(false); // Reset image loaded state for smooth transition
-    }, 5000);
+  //     setImgSrc(allImg[count]);
+  //     setIsImageLoaded(false); // Reset image loaded state for smooth transition
+  //   }, 5000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const handleImageLoad = () => {
     setIsImageLoaded(true);
@@ -38,15 +38,15 @@ export default function Home() {
   console.log(currentScroll);
 
   return (
-    <main className={`${poppins.className} w-screen overflow-hidden`}>
+    <main className={`${poppins.className} w-screen overflow-hidden bg-[#bbbbc9] `}>
       <NavBar setCurrentScroll={setCurrentScroll} />
-      <div id="home" className="h-screen w-full bg-black relative">
+      <div id="home" className="h-screen w-full bg-[#bbbbc9] relative mt-24">
         <div className="max-w-7xl mx-auto p-5 md:p-10 h-full flex flex-col justify-center gap-5 text-white relative z-10">
-          <p className="text-lg font-medium">Let&apos;s Stand Together</p>
-          <p className="text-6xl max-w-3xl font-bold">
+          <p className="text-lg font-medium text-[#282d55]">Let&apos;s Stand Together</p>
+          <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
             Improving communities and imparting change
           </p>
-          <p className="text-lg font-medium max-w-2xl">
+          <p className="text-lg font-medium max-w-2xl text-[#282d55]">
             Let&apos;s create an avenue to improve the quality of life in our
             community, render change and foster unity
           </p>
@@ -67,10 +67,10 @@ export default function Home() {
           {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
         </div>
       </div>
-      <div id="about" className="w-full text-gray-500 ">
+      <div id="about" className="w-full text-gray-500 bg-white">
         <div className="max-w-7xl mx-auto p-5 md:px-10 py-32">
           <h2
-            className={`text-center text-[#39ADF8] transition-all transform duration-300 ${
+            className={`text-center text-[#39ADF8] transition-all transform duration-500 ${
               currentScroll >= 400
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-40"
