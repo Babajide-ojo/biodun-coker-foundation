@@ -68,7 +68,7 @@ const NavBar = ({ setCurrentScroll }) => {
 const NavLink = ({ href, children, activeLink }) => (
   <Link href={href}>
     <p
-      className={`hover:text-[#1F7DCD]  text-xs md:text-md transition-all duration-300 ${
+      className={`hover:text-[#1F7DCD]  text-xs md:text-lg transition-all duration-300 ${
         activeLink === href.slice(1) && "text-[#1F7DCD]"
       }`}
     >
