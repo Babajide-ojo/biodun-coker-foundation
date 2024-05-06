@@ -67,7 +67,7 @@ export default function Home() {
           {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
         </div>
       </div>
-      <div id="about" className="w-full bg-[#0D1117] text-white">
+      <div id="about" className="w-full text-gray-500 ">
         <div className="max-w-7xl mx-auto p-5 md:px-10 py-32">
           <h2
             className={`text-center text-[#39ADF8] transition-all transform duration-300 ${
@@ -81,7 +81,7 @@ export default function Home() {
               Biodun Coker
             </span>
           </h2>
-          <div className={`mt-10`}>
+          <div className={`mt-10 flex flex-col gap-10`}>
             <div
               className={`transition-all duration-500 sm:flex gap-5 items-start  ${
                 currentScroll >= 400
@@ -96,7 +96,7 @@ export default function Home() {
                 height={100}
                 className="float-left sm:float-none mr-3"
               />
-              <p>
+              <p className="leading-8">
                 Biodun Coker is a vision-driven bonified Nigerian who’s
                 constantly seizing the opportunity to serve communities and
                 positively impact lives. His early life began in Olowogbowo Area
@@ -108,7 +108,7 @@ export default function Home() {
                 College, Igbonla.{" "}
               </p>
             </div>
-            <br />
+
             <div
               className={`transition-all duration-500 sm:flex sm:flex-row-reverse gap-5 items-start ${
                 currentScroll >= 400
@@ -123,7 +123,7 @@ export default function Home() {
                 height={100}
                 className="float-right sm:float-none"
               />
-              <p>
+              <p className="leading-8">
                 Upon the completion of his secondary schooling, Biodun furthered
                 his education as he got admitted to Lagos State University,
                 where he successfully bagged a BSc in Economics. Interestingly,
@@ -132,7 +132,7 @@ export default function Home() {
                 Accounting from Oxford Brookes University.
               </p>
             </div>
-            <br />
+
             <div
               className={`transition-all duration-500 sm:flex gap-5 items-start ${
                 currentScroll >= 400
@@ -147,7 +147,7 @@ export default function Home() {
                 height={100}
                 className="float-left sm:float-none mr-3"
               />
-              <p>
+              <p className="leading-8">
                 As an accomplished chartered accountant, Biodun Coker is a
                 Fellow member of Association of Chartered Certified Accountants
                 (ACCA) and also a member of Institute of Financial Accountants
@@ -161,9 +161,7 @@ export default function Home() {
         </div>
       </div>
       <div id="leadership" className="text-white bg-blue-500">
-        <hq className="text-center text-3xl font-medium">
-          Exceptional Loader
-        </hq>
+        <hq className="text-center text-3xl font-medium">Exceptional Loader</hq>
       </div>
     </main>
   );
