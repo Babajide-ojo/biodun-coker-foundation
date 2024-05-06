@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -47,13 +49,33 @@ export default function Home() {
           <p className="text-lg font-medium text-[#282d55]">
             Let&apos;s Stand Together
           </p>
-          <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
+          {/* <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
             Improving communities and imparting change
-          </p>
-          <p className="text-lg font-medium max-w-2xl text-[#282d55]">
-            Let&apos;s create an avenue to improve the quality of life in our
+          </p>  */}
+              <p className="text-lg font-medium max-w-2xl text-[#282d55]">
+           An exceptional leader creating avenues to improve the quality of life in our
             community, render change and foster unity
           </p>
+               <h1 className="text-2xl font-bold mt-8">
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Improving communities",
+                  2000,
+                  "Impacting change",
+                  2000,
+                  "Impacting lives",
+                  2000,
+                  "Creating solutions",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "1.5em", display: "inline-block", color: '#282d55' }}
+                repeat={Infinity}
+              />
+            </h1>
+      
         </div>
         <div
           className={`absolute right-0 bottom-0 transition-opacity duration-500 ${
@@ -87,7 +109,7 @@ export default function Home() {
           </h2>
           <div className={`mt-10 flex flex-col gap-10`}>
             <div
-              className={`transition-all duration-500 sm:flex gap-5 items-start  ${
+              className={`transition-all duration-500 sm:flex gap-5 items-start border-blue border-b-2 pb-8  ${
                 currentScroll >= 400
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-40"
@@ -105,7 +127,7 @@ export default function Home() {
                 constantly seizing the opportunity to serve communities and
                 positively impact lives. His early life began in Olowogbowo Area
                 of Lagos Island, Lagos State, where he was raised within the
-                four walls of his biological parents’ home. Fortunately,
+                four walls of his biological parents’ home. <br></br>Fortunately,
                 Biodun’s parents knew how essential it was for a child to
                 receive a sound education from an early age. He was sent to
                 Flora Nursery and Primary School, and then to Lagos State Model
@@ -114,7 +136,7 @@ export default function Home() {
             </div>
 
             <div
-              className={`transition-all duration-500 sm:flex sm:flex-row-reverse gap-5 items-start ${
+              className={`transition-all duration-500 sm:flex sm:flex-row-reverse gap-5 items-start border-blue border-b-2 pb-8 ${
                 currentScroll >= 400
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-40"
@@ -130,7 +152,7 @@ export default function Home() {
               <p className="leading-8">
                 Upon the completion of his secondary schooling, Biodun furthered
                 his education as he got admitted to Lagos State University,
-                where he successfully bagged a BSc in Economics. Interestingly,
+                where he successfully bagged a BSc in Economics. <br></br> Interestingly,
                 he was willing to broaden his horizons even after this
                 milestone. This impelled him to earn another BSc in Applied
                 Accounting from Oxford Brookes University.
@@ -155,7 +177,7 @@ export default function Home() {
                 As an accomplished chartered accountant, Biodun Coker is a
                 Fellow member of Association of Chartered Certified Accountants
                 (ACCA) and also a member of Institute of Financial Accountants
-                (IFA). Aside from his thriving career in accounting, he has also
+                (IFA). <br></br>Aside from his thriving career in accounting, he has also
                 carved a brilliant entrepreneurial trajectory by establishing
                 two businesses. He’s the founder and director of Fruition
                 Consultant Limited and Fruition Outsourcing Limited.
