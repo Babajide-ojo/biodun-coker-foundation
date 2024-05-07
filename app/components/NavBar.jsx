@@ -4,11 +4,10 @@ import Image from "next/image";
 import logo from "../../public/logo.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { RiMenuFold2Fill, RiMenuFoldFill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 
-const NavBar = ({ setCurrentScroll }) => {
+const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
   const [navBg, setNavBg] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
   const [navMenu, setNavMenu] = useState(false);
@@ -18,28 +17,43 @@ const NavBar = ({ setCurrentScroll }) => {
     const activeNav = () => {
       setCurrentScroll(window.scrollY);
       setScroll(window.scrollY);
-
+      setCurrentWidth(window.innerWidth);
       if (window.scrollY >= 0 && window.scrollY <= 10) {
         setNavBg(false);
       } else {
         setNavBg(true);
       }
-      if (window.scrollY >= 0 && window.scrollY <= 815) {
-        setActiveLink("home");
-      } else if (window.scrollY >= 816 && window.scrollY <= 1635) {
-        setActiveLink("about");
-      } else if (window.scrollY >= 1636 && window.scrollY <= 2589) {
-        setActiveLink("leadership");
+
+      if (window.innerWidth >= 0 && window.innerWidth <= 640) {
+        if (window.scrollY >= 0 && window.scrollY <= 815) {
+          setActiveLink("home");
+        } else if (window.scrollY >= 816 && window.scrollY <= 2849) {
+          setActiveLink("about");
+        } else if (window.scrollY >= 2850 && window.scrollY <= 4790) {
+          setActiveLink("leadership");
+        } else {
+          setActiveLink("contact");
+        }
       } else {
-        setActiveLink("contact");
+        if (window.scrollY >= 0 && window.scrollY <= 815) {
+          setActiveLink("home");
+        } else if (window.scrollY >= 816 && window.scrollY <= 1635) {
+          setActiveLink("about");
+        } else if (window.scrollY >= 1636 && window.scrollY <= 2589) {
+          setActiveLink("leadership");
+        } else {
+          setActiveLink("contact");
+        }
       }
     };
 
     window.addEventListener("scroll", activeNav);
+    window.addEventListener("resize", activeNav);
 
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", activeNav);
+      window.removeEventListener("resize", activeNav);
     };
   }, []);
 
@@ -68,6 +82,7 @@ const NavBar = ({ setCurrentScroll }) => {
             Contact
           </NavLink>
         </div>
+        {scroll}
         <div className="relative block md:hidden">
           {!navMenu ? (
             <RiMenuFold2Fill size={30} onClick={() => setNavMenu(!navMenu)} />

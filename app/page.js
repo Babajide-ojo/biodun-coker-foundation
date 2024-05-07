@@ -16,6 +16,7 @@ const poppins = Poppins({
 
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState(0);
+  const [currentWidth, setCurrentWidth] = useState(0);
   const [imgSrc, setImgSrc] = useState("/img3.jpg");
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [formData, setFormData] = useState({
@@ -52,11 +53,14 @@ export default function Home() {
     setIsImageLoaded(true);
   };
 
-  console.log(currentScroll);
+  // console.log(currentScroll);
 
   return (
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
-      <NavBar setCurrentScroll={setCurrentScroll} />
+      <NavBar
+        setCurrentScroll={setCurrentScroll}
+        setCurrentWidth={setCurrentWidth}
+      />
       <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9]">
         <div className="max-w-7xl mx-auto h-full flex flex-col sm:flex-row mt-28 md:mt-0 items-center sm:justify-between gap-5 p-5 md:p-10 z-10">
           <div className="max-w-lg">
@@ -200,7 +204,11 @@ export default function Home() {
       <div
         id="leadership"
         className={`text-gray-500 overflow-hidden bg-[#eef1ff] transition-all duration-500 ${
-          currentScroll >= 1000
+          currentWidth >= 0 && currentWidth <= 640
+            ? currentScroll >= 2000
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-40"
+            : currentScroll >= 1000
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-40"
         }`}
@@ -270,7 +278,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto p-5 md:px-10 py-32">
           <h2
             className={`text-center  md:px-10 text-[#39ADF8] transition-all transform duration-500 ${
-              currentScroll >= 1900
+              currentWidth >= 0 && currentWidth <= 640
+                ? currentScroll >= 3500
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 -translate-y-40"
+                : currentScroll >= 1900
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 -translate-y-40"
             }`}
@@ -286,7 +298,11 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-5">
               <div
                 className={`relative flex items-center w-full transition-all transform duration-1000 ${
-                  currentScroll >= 1900
+                  currentWidth >= 0 && currentWidth <= 640
+                    ? currentScroll >= 3500
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-80"
+                    : currentScroll >= 1900
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-80"
                 }`}
@@ -304,7 +320,11 @@ export default function Home() {
               </div>
               <div
                 className={`relative flex items-center w-full transition-all transform duration-1000 ${
-                  currentScroll >= 1900
+                  currentWidth >= 0 && currentWidth <= 640
+                    ? currentScroll >= 3500
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-80"
+                    : currentScroll >= 1900
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 translate-x-80"
                 }`}
@@ -323,7 +343,11 @@ export default function Home() {
             </div>
             <div
               className={`w-full transition-all transform duration-1000 ${
-                currentScroll >= 1900
+                currentWidth >= 0 && currentWidth <= 640
+                  ? currentScroll >= 3500
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-80"
+                  : currentScroll >= 1900
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-80"
               }`}

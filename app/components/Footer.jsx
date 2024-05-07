@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl pt-36 pb-20 p-5 md:px-10 flex flex-col justify-center items-center">
           <div className="max-w-xs w-full h-32 sm:h-40 relative">
-            <Image src="/big-logo.png" alt="logo" fill />
+            <Image src="/logo.png" alt="logo" fill />
           </div>
 
           <p className="my-5 font-light text-center">
