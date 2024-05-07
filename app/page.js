@@ -57,15 +57,13 @@ export default function Home() {
   return (
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
       <NavBar setCurrentScroll={setCurrentScroll} />
-      <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9] relative">
-        <div className="max-w-7xl mx-auto h-full flex flex-col mt-28 md:mt-0 justify-start sm:justify-center gap-5 p-5 md:p-10 relative z-10">
+      <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9]">
+        <div className="max-w-7xl mx-auto h-full flex flex-col sm:flex-row mt-28 md:mt-0 items-center sm:justify-between gap-5 p-5 md:p-10 z-10">
           <div className="max-w-lg">
             <p className="text-lg pb-5 font-medium text-[#282d55]">
               Let&apos;s Stand Together
             </p>
-            {/* <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
-            Improving communities and imparting change
-            </p>  */}
+
             <p className="text-lg font-medium max-w-2xl text-[#282d55]">
               An exceptional leader creating avenues to improve the quality of
               life in our community, render change and foster unity
@@ -94,21 +92,23 @@ export default function Home() {
               />
             </h1>
           </div>
-        </div>
-        <div
-          className={`absolute right-5 bottom-0 transition-opacity duration-500 ${
-            isImageLoaded && currentScroll <= 400 ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={imgSrc}
-            alt="biodun coker"
-            width={600}
-            height={700}
-            className="transition-opacity duration-1000"
-            onLoad={handleImageLoad}
-          />
-          {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
+          <div
+            className={`right-0 bottom-0 transition-opacity duration-500 ${
+              isImageLoaded && currentScroll <= 400
+                ? "opacity-100"
+                : "opacity-0"
+            }`}
+          >
+            <Image
+              src={imgSrc}
+              alt="biodun coker"
+              width={600}
+              height={700}
+              className="transition-opacity duration-1000"
+              onLoad={handleImageLoad}
+            />
+            {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
+          </div>
         </div>
       </div>
       <div id="about" className="w-full text-gray-500 bg-white overflow-hidden">
