@@ -315,7 +315,7 @@ export default function Home() {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInput}
-                  className="w-full p-2 pl-8 border border-gray-400 focus:outline-[#1F7EC9]"
+                  className="w-full p-2 pl-8 border border-gray-400 focus:outline-none"
                 />
               </div>
               <div
@@ -337,7 +337,7 @@ export default function Home() {
                   name="email"
                   value={formData.email}
                   onChange={handleInput}
-                  className="w-full p-2 pl-8 border border-gray-400 focus:outline-[#1F7EC9]"
+                  className="w-full p-2 pl-8 border border-gray-400 focus:outline-none"
                 />
               </div>
             </div>
@@ -358,7 +358,7 @@ export default function Home() {
                 placeholder="Write your message"
                 onChange={handleInput}
                 rows={5}
-                className={`w-full border border-gray-400 my-5 p-2 focus:outline-[#1F7EC9]`}
+                className={`w-full border border-gray-400 my-5 p-2 focus:outline-none`}
               />
               <button className="uppercase font-medium text-white bg-[#1F7EC9] py-2 px-4">
                 submit
