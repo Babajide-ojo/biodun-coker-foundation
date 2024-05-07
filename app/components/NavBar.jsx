@@ -11,12 +11,10 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
   const [navBg, setNavBg] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
   const [navMenu, setNavMenu] = useState(false);
-  const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
     const activeNav = () => {
       setCurrentScroll(window.scrollY);
-      setScroll(window.scrollY);
       setCurrentWidth(window.innerWidth);
       if (window.scrollY >= 0 && window.scrollY <= 10) {
         setNavBg(false);
@@ -82,7 +80,6 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
             Contact
           </NavLink>
         </div>
-        {scroll}
         <div className="relative block md:hidden">
           {!navMenu ? (
             <RiMenuFold2Fill size={30} onClick={() => setNavMenu(!navMenu)} />
