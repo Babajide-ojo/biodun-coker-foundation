@@ -58,7 +58,7 @@ export default function Home() {
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
       <NavBar setCurrentScroll={setCurrentScroll} />
       <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9] relative">
-        <div className="max-w-7xl mx-auto h-full flex flex-col justify-center gap-5 p-5 md:p-10 text-white relative z-10">
+        <div className="max-w-7xl mx-auto h-full flex flex-col mt-28 md:mt-0 justify-start sm:justify-center gap-5 p-5 md:p-10 text-white relative z-10">
           <p className="text-lg p-5 md:p-10 font-medium text-[#282d55]">
             Let&apos;s Stand Together
           </p>
