@@ -58,40 +58,42 @@ export default function Home() {
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
       <NavBar setCurrentScroll={setCurrentScroll} />
       <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9] relative">
-        <div className="max-w-7xl mx-auto h-full flex flex-col mt-28 md:mt-0 justify-start sm:justify-center gap-5 p-5 md:p-10 text-white relative z-10">
-          <p className="text-lg p-5 md:p-10 font-medium text-[#282d55]">
-            Let&apos;s Stand Together
-          </p>
-          {/* <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
+        <div className="max-w-7xl mx-auto h-full flex flex-col mt-28 md:mt-0 justify-start sm:justify-center gap-5 p-5 md:p-10 relative z-10">
+          <div className="max-w-lg">
+            <p className="text-lg pb-5 font-medium text-[#282d55]">
+              Let&apos;s Stand Together
+            </p>
+            {/* <p className="text-6xl max-w-3xl font-bold text-[#282d55]">
             Improving communities and imparting change
-          </p>  */}
-          <p className="text-lg font-medium max-w-2xl text-[#282d55]">
-            An exceptional leader creating avenues to improve the quality of
-            life in our community, render change and foster unity
-          </p>
-          <h1 className="text-2xl font-bold mt-8">
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Improving communities",
-                2000,
-                "Impacting change",
-                2000,
-                "Impacting lives",
-                2000,
-                "Creating solutions",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{
-                fontSize: "1.5em",
-                display: "inline-block",
-                color: "#282d55",
-              }}
-              repeat={Infinity}
-            />
-          </h1>
+            </p>  */}
+            <p className="text-lg font-medium max-w-2xl text-[#282d55]">
+              An exceptional leader creating avenues to improve the quality of
+              life in our community, render change and foster unity
+            </p>
+            <h1 className="text-2xl font-bold mt-8">
+              <TypeAnimation
+                sequence={[
+                  // Same substring at the start will only be typed out once, initially
+                  "Improving communities",
+                  2000,
+                  "Impacting change",
+                  2000,
+                  "Impacting lives",
+                  2000,
+                  "Creating solutions",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{
+                  fontSize: "1.5em",
+                  display: "inline-block",
+                  color: "#282d55",
+                }}
+                repeat={Infinity}
+              />
+            </h1>
+          </div>
         </div>
         <div
           className={`absolute right-5 bottom-0 transition-opacity duration-500 ${
