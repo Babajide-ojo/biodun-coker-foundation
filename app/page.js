@@ -58,7 +58,7 @@ export default function Home() {
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
       <NavBar setCurrentScroll={setCurrentScroll} />
       <div id="home" className="h-screen overflow-hidden bg-[#bbbbc9] relative">
-        <div className="max-w-7xl mx-auto  h-full flex flex-col justify-center gap-5 text-white relative z-10">
+        <div className="max-w-7xl mx-auto h-full flex flex-col justify-center gap-5 p-5 md:p-10 text-white relative z-10">
           <p className="text-lg p-5 md:p-10 font-medium text-[#282d55]">
             Let&apos;s Stand Together
           </p>
@@ -94,7 +94,7 @@ export default function Home() {
           </h1>
         </div>
         <div
-          className={`absolute right-0 bottom-0 transition-opacity duration-500 ${
+          className={`absolute right-5 bottom-0 transition-opacity duration-500 ${
             isImageLoaded && currentScroll <= 400 ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -109,7 +109,7 @@ export default function Home() {
           {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
         </div>
       </div>
-      <div id="about" className="w-full text-gray-500 bg-white">
+      <div id="about" className="w-full text-gray-500 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto py-32 p-5">
           <h2
             className={`text-center text-[#39ADF8] transition-all transform duration-500 ${
@@ -197,7 +197,7 @@ export default function Home() {
       </div>
       <div
         id="leadership"
-        className={`text-gray-500 bg-[#eef1ff] transition-all duration-500 ${
+        className={`text-gray-500 overflow-hidden bg-[#eef1ff] transition-all duration-500 ${
           currentScroll >= 1000
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-40"

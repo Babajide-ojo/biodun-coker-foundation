@@ -54,7 +54,7 @@ const NavBar = ({ setCurrentScroll }) => {
           <Image src={logo} alt="logo" width={120} height={40} />
         </Link>
 
-        <div className="hidden md:flex gap-16">
+        <div className="hidden md:flex gap-16 -ml-10">
           <NavLink href="#home" activeLink={activeLink}>
             Home
           </NavLink>
@@ -68,7 +68,7 @@ const NavBar = ({ setCurrentScroll }) => {
             Contact
           </NavLink>
         </div>
-        <div className="relative">
+        <div className="relative block md:hidden">
           {!navMenu ? (
             <RiMenuFold2Fill size={30} onClick={() => setNavMenu(!navMenu)} />
           ) : (
@@ -76,7 +76,7 @@ const NavBar = ({ setCurrentScroll }) => {
           )}
           <div
             className={`absolute p-5 w-screen -right-3 mt-5 bg-white border z-50 transition-transform duration-300 flex flex-col gap-5 text-black ${
-              !navMenu ? "-translate-x-[50rem]" : "translate-x-0"
+              !navMenu ? "-translate-x-[200rem]" : "translate-x-0"
             }`}
           >
             <div className="flex justify-end">
