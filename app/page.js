@@ -123,12 +123,12 @@ export default function Home() {
                 Biodun Coker (FCCA, AFA) was born in the vibrant Oluwole,
                 Olowogbowo area of Lagos Island, growing up in a politically
                 active environment thanks to his father, Alhaji Abdulbaqee
-                Yemisi-Coker, a dedicated grassroots politician. Their family
+                Yemisi Coker, a dedicated grassroots politician. Their family
                 home on Wilson Lane was a central hub for political meetings,
                 where he and his siblings managed logistics, from setting up
                 seats to handling media and refreshments.
                 <br></br>
-                During General Sanni Abacha's transition from military to
+                During General Sanni Abacha&#39;s transition from military to
                 civilian rule, their home witnessed the covert formation of five
                 political parties. This significant period profoundly influenced
                 his early political insights and laid the groundwork for his
@@ -155,7 +155,7 @@ export default function Home() {
                 className="float-right sm:float-none"
               />
               <p className="leading-8">
-                Biodun's educational journey reflects his commitment to academic
+                Biodun&#39;s educational journey reflects his commitment to academic
                 excellence and intellectual growth. After completing his
                 secondary education, he pursued a Bachelor of Science in
                 Economics at Lagos State University, where he laid a solid
