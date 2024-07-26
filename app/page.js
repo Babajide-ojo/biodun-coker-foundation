@@ -8,6 +8,7 @@ import { FaRegUser } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,28 +33,9 @@ export default function Home() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // useEffect(() => {
-  //   const allImg = ["/img3.jpg", "/img3.jpg", "/img3.jpg"];
-  //   let count = 0;
-  //   const interval = setInterval(() => {
-  //     if (count < 2) {
-  //       count += 1;
-  //     } else count = 0;
-
-  //     setImgSrc(allImg[count]);
-  //     setIsImageLoaded(false); // Reset image loaded state for smooth transition
-  //   }, 5000);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
-
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
-
-  // console.log(currentScroll);
 
   return (
     <main className={`${poppins.className}  bg-[#bbbbc9] `}>
@@ -105,10 +87,10 @@ export default function Home() {
           >
             <Image
               src={imgSrc}
-              alt="biodun coker"
+              alt="Biodun Coker (FCCA, AFA)"
               width={600}
               height={700}
-              className="transition-opacity duration-1000"
+              className="transition-opacity duration-1000 mt-24"
               onLoad={handleImageLoad}
             />
             {/* <div className="h-full w-full bg-white bg-opacity-100 z-20" /> */}
@@ -126,7 +108,7 @@ export default function Home() {
           >
             About{" "}
             <span className="text-[#1F7EC9] text-3xl font-medium">
-              Biodun Coker
+              Biodun Coker (FCCA, AFA)
             </span>
           </h2>
           <div className={`mt-10 flex flex-col gap-10`}>
@@ -138,15 +120,23 @@ export default function Home() {
               }`}
             >
               <p className="leading-8">
-                Biodun Coker is a vision-driven bonified Nigerian who’s
-                constantly seizing the opportunity to serve communities and
-                positively impact lives. His early life began in Olowogbowo Area
-                of Lagos Island, Lagos State, where he was raised within the
-                four walls of his biological parents’ home. <br></br>
-                Fortunately, Biodun’s parents knew how essential it was for a
-                child to receive a sound education from an early age. He was
-                sent to Flora Nursery and Primary School, and then to Lagos
-                State Model College, Igbonla.{" "}
+                Biodun Coker (FCCA, AFA) was born in the vibrant Oluwole,
+                Olowogbowo area of Lagos Island, growing up in a politically
+                active environment thanks to his father, Alhaji Abdulbaqee
+                Yemisi-Coker, a dedicated grassroots politician. Their family
+                home on Wilson Lane was a central hub for political meetings,
+                where he and his siblings managed logistics, from setting up
+                seats to handling media and refreshments.
+                <br></br>
+                During General Sanni Abacha's transition from military to
+                civilian rule, their home witnessed the covert formation of five
+                political parties. This significant period profoundly influenced
+                his early political insights and laid the groundwork for his
+                future endeavors in politics.
+                <br></br>
+                Today, Biodun Coker is a vision-driven Nigerian, constantly
+                seizing opportunities to serve communities and make a positive
+                impact on lives.
               </p>
             </div>
 
@@ -165,12 +155,16 @@ export default function Home() {
                 className="float-right sm:float-none"
               />
               <p className="leading-8">
-                Upon the completion of his secondary schooling, Biodun furthered
-                his education as he got admitted to Lagos State University,
-                where he successfully bagged a BSc in Economics. <br></br>{" "}
-                Interestingly, he was willing to broaden his horizons even after
-                this milestone. This impelled him to earn another BSc in Applied
-                Accounting from Oxford Brookes University.
+                Biodun's educational journey reflects his commitment to academic
+                excellence and intellectual growth. After completing his
+                secondary education, he pursued a Bachelor of Science in
+                Economics at Lagos State University, where he laid a solid
+                foundation in economic principles. Driven by a desire to expand
+                his expertise, he then achieved a second Bachelor of Science
+                degree in Applied Accounting from Oxford Brookes University.
+                This dual academic background in economics and accounting
+                highlights his dedication to both theoretical and practical
+                aspects of finance.
               </p>
             </div>
 
@@ -189,13 +183,17 @@ export default function Home() {
                 className="float-left sm:float-none mr-3"
               />
               <p className="leading-8">
-                As an accomplished chartered accountant, Biodun Coker is a
-                Fellow member of Association of Chartered Certified Accountants
-                (ACCA) and also a member of Institute of Financial Accountants
-                (IFA). <br></br>Aside from his thriving career in accounting, he
-                has also carved a brilliant entrepreneurial trajectory by
-                establishing two businesses. He’s the founder and director of
-                Fruition Consultant Limited and Fruition Outsourcing Limited.
+                Aside from being a Fellow of the ACCA, he has also carved a
+                remarkable entrepreneurial trajectory by establishing multiple
+                successful businesses both in Nigeria and internationally. His
+                ventures span various industries, showcasing his versatility and
+                business acumen. Through strategic planning and innovative
+                thinking, he has been able to build and grow enterprises that
+                not only thrive in competitive markets but also contribute
+                significantly to economic development. His entrepreneurial
+                spirit, combined with his extensive financial expertise, has
+                made him a respected figure in the business community both
+                locally and abroad.
               </p>
             </div>
           </div>
@@ -220,26 +218,31 @@ export default function Home() {
           <div className="flex flex-col gap-8 mt-8">
             <div className="flex flex-col gap-5">
               <p className="leading-7">
-                Leadership is built on the bedrock of vision, integrity, and
-                empathy. Biodun understands this. That&apos;s the reason these
-                leadership qualities are evident in his endeavors and
-                contributions to society.
+                Leadership is anchored in vision, integrity, and
+                empathy—qualities that Biodun Coker (FCCA, AFA) exemplifies
+                through his actions and contributions. In a world where
+                improving lives is a constant priority, Biodun is dedicated to
+                making a difference. His commitment to giving back is evident in
+                his diverse efforts, from providing vital resources to actively
+                supporting communities.
               </p>
               <p className="leading-7">
-                Living in a time when there&apos;s a constant need to improve
-                people&apos;s lives, Biodun Coker is enthusiastic about giving
-                back and helping out in diverse ways. From providing resources
-                to lending a hand, his set of values is built around uplifting
-                others. He delights in fostering a sense of community and
-                enriching people&apos;s well-being.
+                Driven by a passion for fostering a sense of unity and enhancing
+                well-being, Biodun has seamlessly blended his career
+                achievements and entrepreneurial success with a profound
+                commitment to uplifting others. As he continues to build his
+                career and expand his impact, his core mission remains clear: to
+                mentor, resource, and empower individuals, guiding them towards
+                realizing their full potential and creating a ripple effect of
+                positive change.
               </p>
               <p className="leading-7">
                 During the course of building his career, running a business,
-                and supporting communities, Biodun Coker has evolved into an
-                empathetic soul with the innate desire to impact as many lives
-                as possible. His life goal is to provide mentorship, resources,
-                and opportunities to empower people and place them on a path to
-                reach their full potential.
+                and supporting communities, Biodun Coker (FCCA, AFA) has evolved
+                into an empathetic soul with the innate desire to impact as many
+                lives as possible. His life goal is to provide mentorship,
+                resources, and opportunities to empower people and place them on
+                a path to reach their full potential.
               </p>
             </div>
             <div className="flex flex-col gap-5">
@@ -247,24 +250,25 @@ export default function Home() {
                 Philanthropy
               </h3>
               <p className="leading-7">
-                Having developed an expertise in accounting and attained ACCA
-                Fellowship, Biodun Coker well understands the importance of
-                adopting relevant skillsets. This is why as part of his goal to
-                give back to society, he has established a foundation aimed at
-                empowering lives within the Lagos Island community with free IT
-                and Computer skills, vocational studies, and other community
-                development courses. His goal is to ensure that people are
-                equipped with the relevant knowledge and tools to thrive and
-                contribute meaningfully to society.
+                With a distinguished expertise in accounting and as a Fellow of
+                the ACCA, Biodun Coker (FCCA, AFA) recognizes the crucial role
+                of acquiring relevant skills. Driven by his commitment to giving
+                back to society, he has established the Biodun Coker Foundation.
+                This foundation is dedicated to empowering lives within the
+                Lagos Island community by providing free IT and computer skills
+                training, vocational studies, and other community development
+                courses. His mission is to equip individuals with the knowledge
+                and tools needed to thrive and make meaningful contributions to
+                society. For more information, visit <Link href="https://bioduncokerfoundation.org/" className="underline text-[#1F7DCD]">Biodun Coker Foundation.</Link> 
               </p>
             </div>
             <div className="flex flex-col gap-5">
               <h3 className="text-[#1F7DCD] text-xl font-medium">Family</h3>
               <p className="leading-7">
-                As much as Biodun Coker is committedly involved in public
-                service, he hasn&apos;t faltered when it comes to building a
-                stable and happy household. He&apos;s currently married and
-                blessed with two brilliant kids.
+                As much as Biodun Coker (FCCA, AFA) is committedly involved in
+                public service, he hasn&apos;t faltered when it comes to
+                building a stable and happy household. He&apos;s currently
+                married and blessed with two brilliant kids.
               </p>
             </div>
           </div>
@@ -289,10 +293,12 @@ export default function Home() {
           >
             Contact{" "}
             <span className="text-[#1F7EC9] text-3xl font-medium">
-              Biodun Coker
+              Biodun Coker (FCCA, AFA)
             </span>
           </h2>
-          <p className="text-center mt-5">Send Biodun Coker a message</p>
+          <p className="text-center mt-5">
+            Send Biodun Coker (FCCA, AFA) a message
+          </p>
 
           <div className="mt-5">
             <div className="flex flex-col sm:flex-row gap-5">
