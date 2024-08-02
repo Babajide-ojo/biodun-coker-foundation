@@ -15,7 +15,7 @@ const Footer = () => {
     <main className="bg-[#101828] text-white">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-7xl pt-36 pb-20 p-5 md:px-10 flex flex-col justify-center items-center">
-          <div className="max-w-xs w-full h-32 sm:h-40 relative">
+          <div className="max-w-md w-full h-32 sm:h-40 relative">
             <Image src="/logo.png" alt="logo" fill />
           </div>
 

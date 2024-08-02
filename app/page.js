@@ -155,9 +155,9 @@ export default function Home() {
                 className="float-right sm:float-none"
               />
               <p className="leading-8">
-                Biodun&#39;s educational journey reflects his commitment to academic
-                excellence and intellectual growth. After completing his
-                secondary education, he pursued a Bachelor of Science in
+                Biodun&#39;s educational journey reflects his commitment to
+                academic excellence and intellectual growth. After completing
+                his secondary education, he pursued a Bachelor of Science in
                 Economics at Lagos State University, where he laid a solid
                 foundation in economic principles. Driven by a desire to expand
                 his expertise, he then achieved a second Bachelor of Science
@@ -176,7 +176,7 @@ export default function Home() {
               }`}
             >
               <Image
-                src="/fruition.jpeg"
+                src="/ACCA LOGO RED.PNG"
                 alt="fruition"
                 width={100}
                 height={100}
@@ -259,7 +259,13 @@ export default function Home() {
                 training, vocational studies, and other community development
                 courses. His mission is to equip individuals with the knowledge
                 and tools needed to thrive and make meaningful contributions to
-                society. For more information, visit <Link href="https://bioduncokerfoundation.org/" className="underline text-[#1F7DCD]">Biodun Coker Foundation.</Link> 
+                society. For more information, visit{" "}
+                <Link
+                  href="https://bioduncokerfoundation.org/"
+                  className="underline text-[#1F7DCD]"
+                >
+                  Biodun Coker Foundation.
+                </Link>
               </p>
             </div>
             <div className="flex flex-col gap-5">
@@ -292,7 +298,7 @@ export default function Home() {
             }`}
           >
             Contact{" "}
-            <span className="text-[#1F7EC9] text-3xl font-medium">
+            <span className="text-[#1F7EC9] text-2xl font-medium">
               Biodun Coker (FCCA, AFA)
             </span>
           </h2>
