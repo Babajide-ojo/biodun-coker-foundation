@@ -169,19 +169,20 @@ export default function Home() {
             </div>
 
             <div
-              className={`transition-all duration-500 ${
+              className={`transition-all sm:flex gap-5 items-start duration-500 ${
                 currentScroll >= 400
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-40"
               }`}
             >
-              <Image
-                src="/ACCA LOGO RED.PNG"
-                alt="acca logo"
-                width={100}
-                height={100}
-                className="float-left mr-3"
-              />
+              <div className="relative h-24 min-w-24 float-left mr-3">
+                <Image
+                  src="/ACCA LOGO RED.jpg"
+                  alt="acca"
+                  fill
+                  className=""
+                />
+              </div>
               <p className="leading-8">
                 Aside from being a Fellow of the ACCA, he has also carved a
                 remarkable entrepreneurial trajectory by establishing multiple
