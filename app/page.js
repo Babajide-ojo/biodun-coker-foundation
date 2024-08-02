@@ -177,7 +177,7 @@ export default function Home() {
             >
               <Image
                 src="/ACCA LOGO RED.PNG"
-                alt="fruition"
+                alt="acca logo"
                 width={100}
                 height={100}
                 className="float-left mr-3"
