@@ -107,9 +107,10 @@ export default function Home() {
             }`}
           >
             About{" "}
-            <span className="text-[#1F7EC9] text-3xl font-medium">
-              Biodun Coker (FCCA, AFA)
-            </span>
+            <span className="text-[#1F7EC9] text-2xl font-medium">
+              Biodun Coker
+            </span>{" "}
+            (FCCA, AFA)
           </h2>
           <div className={`mt-10 flex flex-col gap-10`}>
             <div
@@ -176,12 +177,7 @@ export default function Home() {
               }`}
             >
               <div className="relative h-24 min-w-24 float-left mr-3">
-                <Image
-                  src="/ACCA LOGO RED.jpg"
-                  alt="acca"
-                  fill
-                  className=""
-                />
+                <Image src="/ACCA LOGO RED.jpg" alt="acca" fill className="" />
               </div>
               <p className="leading-8">
                 Aside from being a Fellow of the ACCA, he has also carved a
@@ -300,11 +296,13 @@ export default function Home() {
           >
             Contact{" "}
             <span className="text-[#1F7EC9] text-2xl font-medium">
-              Biodun Coker (FCCA, AFA)
-            </span>
+              Biodun Coker
+            </span>{" "}
+            (FCCA, AFA)
           </h2>
           <p className="text-center mt-5">
-            Send Biodun Coker (FCCA, AFA) a message
+            Send Biodun Coker <span className="text-sm">(FCCA, AFA)</span> a
+            message
           </p>
 
           <div className="mt-5">
