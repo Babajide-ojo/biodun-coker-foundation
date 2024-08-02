@@ -152,7 +152,7 @@ export default function Home() {
                 alt="oxford brookes"
                 width={100}
                 height={100}
-                className="float-right sm:float-none"
+                className="float-right"
               />
               <p className="leading-8">
                 Biodun&#39;s educational journey reflects his commitment to
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
 
             <div
-              className={`transition-all duration-500 sm:flex gap-5 items-start ${
+              className={`transition-all duration-500 ${
                 currentScroll >= 400
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-40"
@@ -180,7 +180,7 @@ export default function Home() {
                 alt="fruition"
                 width={100}
                 height={100}
-                className="float-left sm:float-none mr-3"
+                className="float-left mr-3"
               />
               <p className="leading-8">
                 Aside from being a Fellow of the ACCA, he has also carved a
