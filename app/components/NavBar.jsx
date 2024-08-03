@@ -66,7 +66,7 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
           <Image src={logo} alt="logo" width={120} height={40} />
         </Link>
 
-        <div className="hidden md:flex gap-16 -ml-10">
+        <div className="hidden md:flex gap-10 lg:gap-16 -ml-10">
           <NavLink href="#home" activeLink={activeLink}>
             Home
           </NavLink>
@@ -79,6 +79,12 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
           <NavLink href="#contact" activeLink={activeLink}>
             Contact
           </NavLink>
+          <NavLink
+            href="https://bioduncokerfoundation.org/"
+            activeLink={activeLink}
+          >
+            Foundation
+          </NavLink>
         </div>
         <div className="relative block md:hidden">
           {!navMenu ? (
@@ -87,17 +93,17 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
             <RiMenuFoldFill size={30} onClick={() => setNavMenu(!navMenu)} />
           )}
           <div
-            className={`absolute p-5 w-screen -right-3 mt-5 bg-white border z-50 transition-transform duration-300 flex flex-col gap-5 text-black ${
+            className={`absolute p-5 w-screen h-[95vh] -p-10 -right-3 mt-3 bg-white border -z-10 transition-transform duration-300 flex flex-col items-center justify-center gap-20 text-xl  text-black ${
               !navMenu ? "-translate-x-[200rem]" : "translate-x-0"
             }`}
           >
-            <div className="flex justify-end">
+            {/* <div className="flex justify-end">
               <IoMdClose
                 size={20}
                 className="cursor-pointer"
                 onClick={() => setNavMenu(false)}
               />
-            </div>
+            </div> */}
             <NavLink
               href="#home"
               activeLink={activeLink}
@@ -126,6 +132,13 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
             >
               Contact
             </NavLink>
+            <NavLink
+              href="https://bioduncokerfoundation.org/"
+              activeLink={activeLink}
+              onClick={() => setNavMenu(false)}
+            >
+              Foundation
+            </NavLink>
           </div>
         </div>
       </div>
@@ -136,8 +149,9 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
 const NavLink = ({ href, children, activeLink, onClick }) => (
   <Link href={href} onClick={onClick && onClick}>
     <p
-      className={`hover:text-[#1F7DCD]  text-xs md:text-lg transition-all duration-300 ${
-        activeLink === href.slice(1) && "text-[#1F7DCD]"
+      className={`hover:text-[#1F7DCD] border-b-2 border-transparent  text-lg transition-all duration-300 ${
+        activeLink === href.slice(1) &&
+        "border-[#1F7DCD] md:border-transparent md:text-[#1F7DCD]"
       }`}
     >
       {children}
