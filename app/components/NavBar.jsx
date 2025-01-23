@@ -70,7 +70,7 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
           <NavLink href="#home" activeLink={activeLink}>
             Home
           </NavLink>
-          <NavLink href="#about" activeLink={activeLink}>
+          <NavLink href="/about" activeLink={activeLink}>
             About
           </NavLink>
           <NavLink href="#leadership" activeLink={activeLink}>
