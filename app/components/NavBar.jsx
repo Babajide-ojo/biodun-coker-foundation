@@ -112,7 +112,7 @@ const NavBar = ({ setCurrentScroll, setCurrentWidth }) => {
               Home
             </NavLink>
             <NavLink
-              href="#about"
+              href="/about"
               activeLink={activeLink}
               onClick={() => setNavMenu(false)}
             >
